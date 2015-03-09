@@ -6,7 +6,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$username = addslashes($_POST['username']);
 	$password = addslashes($_POST['password']);
 
-	$login_model = new LoginModel();
+	$login_model = new Model_users();
 	$user = $login_model->getUser($username, $password);
 
 	if ($user)
