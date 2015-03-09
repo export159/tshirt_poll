@@ -1,5 +1,5 @@
 <?php
-require_once('../model/model_user.php');
+require_once('../model/model_users.php');
 
 if (isset($_POST['username']) && isset($_POST['password']))
 {

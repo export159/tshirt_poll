@@ -1,3 +1,3 @@
 <?php
 
-	header('controller/index.php');
+	header('location: view/login/');
