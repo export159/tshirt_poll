@@ -37,17 +37,20 @@ class Model_users extends PDOConnector{
 		for: signup functionality
 	*/
 	public function addUser($userInfo){
+		$id = null;
 		$this->connect();
 		try{
-			$sql = "INSERT INTO tbl_user(name, username, password) VALUES(?, ?, ?)";
+			$sql = "INSERT INTO tbl_users(name, username, password) VALUES(?, ?, ?)";
 			$stmt = $this->dbh->prepare($sql);
 			$stmt->bindParam(1, $userInfo['name']);
 			$stmt->bindParam(2, $userInfo['username']);
 			$stmt->bindParam(3, $userInfo['password']);
 			$stmt->execute();
+			$id = $this->dbh->lastInsertId();
 		}catch(PDOException $e){
 			print_r($e);
 		}
 		$this->close();
+		return $id;
 	}
 }
