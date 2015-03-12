@@ -1,7 +1,7 @@
 <?php
 
 class PDOConnector{
-	private $host = "localhost";
+	private $host = "10.10.19.39";
 	private $dbname = "db_tPoll";
 	private $username = "root";
 	private $password = "";

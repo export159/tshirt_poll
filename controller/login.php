@@ -9,7 +9,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$login_model = new Model_users();
 	$user = $login_model->getUser($username, $password);
 
-	if ($user)
+	if ($user != NULL)
 	{
 		session_start();
 		$_SESSION['user_id'] = $user['user_id'];
