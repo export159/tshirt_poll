@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 -- Database: `db_tpoll`
 --
 
+CREATE DATABASE IF NOT EXISTS `db_tpoll`;
+USE `db_tpoll`;
+
 -- --------------------------------------------------------
 
 --
